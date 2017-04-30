@@ -26,3 +26,10 @@ class Team: NSCoding {
     }
 }
 
+extension Team: Equatable {
+    
+    static func == (lhs: Team, rhs: Team) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+}
