@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Welcome-->
+        <!--Welcome View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="SlackStatus" customModuleProvider="target" sceneMemberID="viewController">
@@ -46,13 +46,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's get to work!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIU-Uo-VSu">
-                                <rect key="frame" x="16" y="80" width="343" height="36"/>
+                                <rect key="frame" x="16" y="124" width="343" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
                                 <color key="textColor" red="0.33333333333333331" green="0.38431372549019605" blue="0.44313725490196076" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To make your schedule a breeze you’ll need to log into Slack." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oE4-9C-NqB">
-                                <rect key="frame" x="16" y="124" width="343" height="48"/>
+                                <rect key="frame" x="16" y="168" width="343" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.33333333329999998" green="0.38431372549999998" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -71,11 +71,11 @@
                             <constraint firstItem="oE4-9C-NqB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="wR6-eh-ZXe"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Welcome" id="lah-7n-Fso"/>
+                    <navigationItem key="navigationItem" id="zRx-3o-O0q"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="570" y="37"/>
+            <point key="canvasLocation" x="1508" y="36.431784107946029"/>
         </scene>
         <!--OAuthLoginScreen-->
         <scene sceneID="mmW-8A-vdk">
@@ -150,7 +150,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hZq-2s-eUu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1317.5999999999999" y="32.833583208395808"/>
+            <point key="canvasLocation" x="2256.8000000000002" y="32.833583208395808"/>
         </scene>
         <!--Team Schedule-->
         <scene sceneID="DXR-Lc-Jka">
@@ -180,7 +180,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lCW-G3-hmi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2036" y="33"/>
+            <point key="canvasLocation" x="2975.1999999999998" y="32.833583208395808"/>
         </scene>
     </scenes>
 </document>
