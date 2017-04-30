@@ -119,16 +119,12 @@
 		2DAC06571EB4EDEE00164121 /* SlackStatus */ = {
 			isa = PBXGroup;
 			children = (
+				2DAC065C1EB4EDEE00164121 /* AppMain.storyboard */,
 				2DCE5A181EB6A2B400F438C3 /* KeychainWrapper */,
 				2DCE5A131EB69E5000F438C3 /* Models */,
 				2DAC068B1EB4F9F500164121 /* Controllers */,
-				2DAC06581EB4EDEE00164121 /* AppDelegate.swift */,
-				2DAC065C1EB4EDEE00164121 /* AppMain.storyboard */,
-				2DAC06621EB4EDEE00164121 /* Assets.xcassets */,
-				2DAC06641EB4EDEE00164121 /* LaunchScreen.storyboard */,
-				2DAC06671EB4EDEE00164121 /* Info.plist */,
-				2DAC065F1EB4EDEE00164121 /* SlackStatus.xcdatamodeld */,
 				2DCE5A101EB69DCB00F438C3 /* Services */,
+				2DCE5A1F1EB6A3FA00F438C3 /* Supporting Files */,
 			);
 			path = SlackStatus;
 			sourceTree = "<group>";
@@ -188,6 +184,18 @@
 				2DCE5A1D1EB6A38100F438C3 /* Team.swift */,
 			);
 			name = KeychainWrapper;
+			sourceTree = "<group>";
+		};
+		2DCE5A1F1EB6A3FA00F438C3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2DAC06581EB4EDEE00164121 /* AppDelegate.swift */,
+				2DAC06621EB4EDEE00164121 /* Assets.xcassets */,
+				2DAC06641EB4EDEE00164121 /* LaunchScreen.storyboard */,
+				2DAC06671EB4EDEE00164121 /* Info.plist */,
+				2DAC065F1EB4EDEE00164121 /* SlackStatus.xcdatamodeld */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
