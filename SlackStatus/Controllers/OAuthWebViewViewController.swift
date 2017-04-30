@@ -9,7 +9,7 @@ protocol OAuthSlackLoginDelegate{
     func loginFailOrDidDismiss()
 }
 
-class OAuthWebViewViewController: UINavigationController {
+class OAuthWebViewViewController: UIViewController {
 
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var exitButton: UIButton!

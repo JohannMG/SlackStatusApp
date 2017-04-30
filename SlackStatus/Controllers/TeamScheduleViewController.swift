@@ -8,7 +8,17 @@
 
 import UIKit
 
-class TeamScheduleViewController: UINavigationController {
+enum ScheduleViewState {
+    case loading
+    case noConnection
+    case error
+    case empty(Team)
+    case loaded(Team)
+}
+
+class TeamScheduleViewController: UIViewController {
+    
+    var displayState = ScheduleViewState.loading
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,16 +30,5 @@ class TeamScheduleViewController: UINavigationController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

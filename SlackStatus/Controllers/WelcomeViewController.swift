@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WelcomeViewController: UINavigationController {
+class WelcomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +23,7 @@ class WelcomeViewController: UINavigationController {
     
     @IBAction func didPressLogin(_ sender: UIButton) {
         sender.isUserInteractionEnabled = false
-        let loginController = OAuthWebViewViewController()
+        let loginController = self.storyboard?.instantiateViewController(withIdentifier: "OAuthLoginScreen") as! OAuthWebViewViewController
         loginController.loginDelegate = self
         
         present(loginController, animated: true) { 

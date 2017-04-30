@@ -1,9 +1,10 @@
-//
 //  ScheduleItem.swift
-//  SlackStatus
-//
-//  Created by Johann Garces on 4/30/17.
-//  Copyright © 2017 johannmg. All rights reserved.
-//
 
 import Foundation
+
+struct ScheduleItem {
+    let time: NSDate
+    let days: Set<Days>
+    let emoji: String
+    let statusMessage: String
+}

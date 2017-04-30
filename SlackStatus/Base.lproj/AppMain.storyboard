@@ -46,13 +46,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's get to work!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIU-Uo-VSu">
-                                <rect key="frame" x="16" y="124" width="343" height="36"/>
+                                <rect key="frame" x="16" y="80" width="343" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
                                 <color key="textColor" red="0.33333333333333331" green="0.38431372549019605" blue="0.44313725490196076" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To make your schedule a breeze you’ll need to log into Slack." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oE4-9C-NqB">
-                                <rect key="frame" x="16" y="168" width="343" height="48"/>
+                                <rect key="frame" x="16" y="124" width="343" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.33333333329999998" green="0.38431372549999998" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -71,7 +71,6 @@
                             <constraint firstItem="oE4-9C-NqB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="wR6-eh-ZXe"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="zRx-3o-O0q"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -80,7 +79,7 @@
         <!--OAuthLoginScreen-->
         <scene sceneID="mmW-8A-vdk">
             <objects>
-                <viewController title="OAuthLoginScreen" id="gvd-Fy-jrd" customClass="OAuthWebViewViewController" customModule="SlackStatus" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OAuthLoginScreen" title="OAuthLoginScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gvd-Fy-jrd" customClass="OAuthWebViewViewController" customModule="SlackStatus" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iza-7A-6ln"/>
                         <viewControllerLayoutGuide type="bottom" id="UPm-9B-O0d"/>
@@ -164,17 +163,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logged in and here is things" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgS-sa-pqA">
-                                <rect key="frame" x="79" y="28" width="216" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="afY-Ap-K2E">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j6s-t0-Lkv">
+                                        <rect key="frame" x="30" y="321.5" width="315" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.27450980390000002" green="0.80392156859999997" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="j6s-t0-Lkv" secondAttribute="trailing" constant="30" id="7e8-Jr-WZW"/>
+                                    <constraint firstItem="j6s-t0-Lkv" firstAttribute="centerX" secondItem="afY-Ap-K2E" secondAttribute="centerX" id="8v3-a5-CEi"/>
+                                    <constraint firstItem="j6s-t0-Lkv" firstAttribute="leading" secondItem="afY-Ap-K2E" secondAttribute="leading" constant="30" id="dv4-1x-rlp"/>
+                                    <constraint firstItem="j6s-t0-Lkv" firstAttribute="centerY" secondItem="afY-Ap-K2E" secondAttribute="centerY" id="y4Y-WB-n8v"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="xgS-sa-pqA" firstAttribute="top" secondItem="hJ4-NQ-arK" secondAttribute="bottom" constant="8" symbolic="YES" id="2gM-Zy-oMY"/>
-                            <constraint firstItem="xgS-sa-pqA" firstAttribute="centerX" secondItem="TXQ-ES-Zxp" secondAttribute="centerX" id="VKo-ZS-Iin"/>
+                            <constraint firstItem="afY-Ap-K2E" firstAttribute="top" secondItem="TXQ-ES-Zxp" secondAttribute="top" id="SAx-ZX-s9b"/>
+                            <constraint firstAttribute="trailing" secondItem="afY-Ap-K2E" secondAttribute="trailing" id="mvE-Px-OO2"/>
+                            <constraint firstItem="afY-Ap-K2E" firstAttribute="leading" secondItem="TXQ-ES-Zxp" secondAttribute="leading" id="nKO-xi-J7s"/>
+                            <constraint firstItem="BXv-mT-TXh" firstAttribute="top" secondItem="afY-Ap-K2E" secondAttribute="bottom" id="sRH-VL-Nhx"/>
                         </constraints>
                     </view>
                 </viewController>

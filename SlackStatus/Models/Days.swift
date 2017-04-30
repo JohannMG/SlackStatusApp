@@ -1,9 +1,28 @@
 //
 //  Days.swift
-//  SlackStatus
-//
-//  Created by Johann Garces on 4/30/17.
-//  Copyright © 2017 johannmg. All rights reserved.
-//
 
 import Foundation
+
+enum Days {
+    case monday
+    case tuesday
+    case wednesday
+    case thursday
+    case friday
+    case saturday
+    case sunday
+}
+
+extension Days {
+    static func getWeekdays() -> Set<Days> {
+        return Set([.monday, .tuesday, .wednesday, .thursday, .friday])
+    }
+    
+    static func getWeekends() -> Set<Days> {
+        return Set([.saturday, .sunday])
+    }
+    
+    static func getAllDays() -> Set<Days> {
+        return getWeekdays().union( getWeekends() )
+    }
+}
