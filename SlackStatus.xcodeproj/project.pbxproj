@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		2DAC06591EB4EDEE00164121 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAC06581EB4EDEE00164121 /* AppDelegate.swift */; };
-		2DAC065B1EB4EDEE00164121 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAC065A1EB4EDEE00164121 /* ViewController.swift */; };
 		2DAC065E1EB4EDEE00164121 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DAC065C1EB4EDEE00164121 /* Main.storyboard */; };
 		2DAC06611EB4EDEE00164121 /* SlackStatus.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2DAC065F1EB4EDEE00164121 /* SlackStatus.xcdatamodeld */; };
 		2DAC06631EB4EDEE00164121 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DAC06621EB4EDEE00164121 /* Assets.xcassets */; };
 		2DAC06661EB4EDEE00164121 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DAC06641EB4EDEE00164121 /* LaunchScreen.storyboard */; };
 		2DAC06711EB4EDEE00164121 /* SlackStatusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAC06701EB4EDEE00164121 /* SlackStatusTests.swift */; };
 		2DAC067C1EB4EDEE00164121 /* SlackStatusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAC067B1EB4EDEE00164121 /* SlackStatusUITests.swift */; };
+		2DCD0B551EB6778400359AE7 /* OAuthWebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCD0B541EB6778400359AE7 /* OAuthWebViewViewController.swift */; };
+		2DCD0B571EB67CEE00359AE7 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCD0B561EB67CEE00359AE7 /* WelcomeViewController.swift */; };
+		2DCD0B591EB67E0E00359AE7 /* TeamScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCD0B581EB67E0E00359AE7 /* TeamScheduleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +39,6 @@
 /* Begin PBXFileReference section */
 		2DAC06551EB4EDEE00164121 /* SlackStatus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlackStatus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DAC06581EB4EDEE00164121 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2DAC065A1EB4EDEE00164121 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2DAC065D1EB4EDEE00164121 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2DAC06601EB4EDEE00164121 /* SlackStatus.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SlackStatus.xcdatamodel; sourceTree = "<group>"; };
 		2DAC06621EB4EDEE00164121 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +50,9 @@
 		2DAC06771EB4EDEE00164121 /* SlackStatusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlackStatusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DAC067B1EB4EDEE00164121 /* SlackStatusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlackStatusUITests.swift; sourceTree = "<group>"; };
 		2DAC067D1EB4EDEE00164121 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DCD0B541EB6778400359AE7 /* OAuthWebViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OAuthWebViewViewController.swift; path = Controllers/OAuthWebViewViewController.swift; sourceTree = "<group>"; };
+		2DCD0B561EB67CEE00359AE7 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeViewController.swift; path = Controllers/WelcomeViewController.swift; sourceTree = "<group>"; };
+		2DCD0B581EB67E0E00359AE7 /* TeamScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeamScheduleViewController.swift; path = Controllers/TeamScheduleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +103,8 @@
 		2DAC06571EB4EDEE00164121 /* SlackStatus */ = {
 			isa = PBXGroup;
 			children = (
+				2DAC068B1EB4F9F500164121 /* Controllers */,
 				2DAC06581EB4EDEE00164121 /* AppDelegate.swift */,
-				2DAC065A1EB4EDEE00164121 /* ViewController.swift */,
 				2DAC065C1EB4EDEE00164121 /* Main.storyboard */,
 				2DAC06621EB4EDEE00164121 /* Assets.xcassets */,
 				2DAC06641EB4EDEE00164121 /* LaunchScreen.storyboard */,
@@ -126,6 +130,16 @@
 				2DAC067D1EB4EDEE00164121 /* Info.plist */,
 			);
 			path = SlackStatusUITests;
+			sourceTree = "<group>";
+		};
+		2DAC068B1EB4F9F500164121 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2DCD0B541EB6778400359AE7 /* OAuthWebViewViewController.swift */,
+				2DCD0B581EB67E0E00359AE7 /* TeamScheduleViewController.swift */,
+				2DCD0B561EB67CEE00359AE7 /* WelcomeViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,9 +279,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DAC065B1EB4EDEE00164121 /* ViewController.swift in Sources */,
 				2DAC06591EB4EDEE00164121 /* AppDelegate.swift in Sources */,
+				2DCD0B591EB67E0E00359AE7 /* TeamScheduleViewController.swift in Sources */,
+				2DCD0B571EB67CEE00359AE7 /* WelcomeViewController.swift in Sources */,
 				2DAC06611EB4EDEE00164121 /* SlackStatus.xcdatamodeld in Sources */,
+				2DCD0B551EB6778400359AE7 /* OAuthWebViewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +532,7 @@
 				2DAC06821EB4EDEE00164121 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2DAC06831EB4EDEE00164121 /* Build configuration list for PBXNativeTarget "SlackStatusTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +541,7 @@
 				2DAC06851EB4EDEE00164121 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2DAC06861EB4EDEE00164121 /* Build configuration list for PBXNativeTarget "SlackStatusUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +550,7 @@
 				2DAC06881EB4EDEE00164121 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

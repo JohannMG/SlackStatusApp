@@ -1,15 +1,21 @@
 //
 //  OAuthWebViewViewController.swift
-//  SlackStatus
-//
-//  Created by Johann Garces on 4/30/17.
-//  Copyright © 2017 johannmg. All rights reserved.
-//
 
 import UIKit
 
+
+protocol OAuthSlackLoginDelegate{
+    func loginDidSucceed()
+    func loginFailOrDidDismiss()
+}
+
 class OAuthWebViewViewController: UINavigationController {
 
+    @IBOutlet weak var headerLabel: UILabel!
+    @IBOutlet weak var exitButton: UIButton!
+    
+    var loginDelegate: OAuthSlackLoginDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,15 +27,22 @@ class OAuthWebViewViewController: UINavigationController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func touchedToDismissLogin(_ sender: UIButton) {
+        dismiss(animated: true) { 
+            self.loginDelegate?.loginFailOrDidDismiss()
+        }
     }
-    */
+    
+    @IBAction func pressedDidSucceed(_ sender: Any) {
+        dismiss(animated: true) { 
+            self.loginDelegate?.loginDidSucceed()
+        }
+    }
+    
+    @IBAction func pressedDidFail(_ sender: Any) {
+        dismiss(animated: true) {
+            self.loginDelegate?.loginFailOrDidDismiss()
+        }
+    }
 
 }

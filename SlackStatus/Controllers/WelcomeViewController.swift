@@ -21,15 +21,32 @@ class WelcomeViewController: UINavigationController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func didPressLogin(_ sender: UIButton) {
+        sender.isUserInteractionEnabled = false
+        let loginController = OAuthWebViewViewController()
+        loginController.loginDelegate = self
+        
+        present(loginController, animated: true) { 
+            sender.isUserInteractionEnabled = true
+        }
     }
-    */
+    
+    
 
+}
+
+extension WelcomeViewController: OAuthSlackLoginDelegate {
+    
+    func loginDidSucceed(){
+        let scheduleViewController = self.storyboard?.instantiateViewController(withIdentifier: "TeamScheduleViewController")
+        
+        if let scheduleViewController = scheduleViewController as? TeamScheduleViewController {
+            present(scheduleViewController, animated: true, completion: nil)
+        }
+    }
+    
+    func loginFailOrDidDismiss(){
+        
+    }
+    
 }

@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Welcome-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="SlackStatus" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,166 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8dz-BX-ML7">
+                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjL-E1-G80">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
+                                        <state key="normal" title="Login &gt;">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didPressLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J1H-ZM-xpb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.27450980392156865" green="0.80392156862745101" blue="0.76862745098039209" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="3Ra-O9-xoz"/>
+                                    <constraint firstAttribute="bottom" secondItem="vjL-E1-G80" secondAttribute="bottom" id="EJI-70-ZUx"/>
+                                    <constraint firstItem="vjL-E1-G80" firstAttribute="leading" secondItem="8dz-BX-ML7" secondAttribute="leading" id="eNy-8X-U5d"/>
+                                    <constraint firstAttribute="trailing" secondItem="vjL-E1-G80" secondAttribute="trailing" id="ldq-IG-yph"/>
+                                    <constraint firstItem="vjL-E1-G80" firstAttribute="top" secondItem="8dz-BX-ML7" secondAttribute="top" id="nJe-s2-Cav"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's get to work!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIU-Uo-VSu">
+                                <rect key="frame" x="16" y="80" width="343" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                                <color key="textColor" red="0.33333333333333331" green="0.38431372549019605" blue="0.44313725490196076" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To make your schedule a breeze you’ll need to log into Slack." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oE4-9C-NqB">
+                                <rect key="frame" x="16" y="124" width="343" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.33333333329999998" green="0.38431372549999998" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="YIU-Uo-VSu" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="2ze-Ex-DPV"/>
+                            <constraint firstItem="YIU-Uo-VSu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="7mD-Qm-5Vp"/>
+                            <constraint firstItem="8dz-BX-ML7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9el-gb-4DQ"/>
+                            <constraint firstItem="oE4-9C-NqB" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Ang-Ke-AEr"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8dz-BX-ML7" secondAttribute="bottom" id="Ccb-yZ-vjO"/>
+                            <constraint firstItem="YIU-Uo-VSu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="KLb-1K-Mpq"/>
+                            <constraint firstItem="oE4-9C-NqB" firstAttribute="top" secondItem="YIU-Uo-VSu" secondAttribute="bottom" constant="8" id="cmo-0U-hBL"/>
+                            <constraint firstAttribute="trailing" secondItem="8dz-BX-ML7" secondAttribute="trailing" id="sXX-CO-Jma"/>
+                            <constraint firstItem="oE4-9C-NqB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="wR6-eh-ZXe"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Welcome" id="lah-7n-Fso"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="570" y="37"/>
+        </scene>
+        <!--OAuthLoginScreen-->
+        <scene sceneID="mmW-8A-vdk">
+            <objects>
+                <viewController title="OAuthLoginScreen" id="gvd-Fy-jrd" customClass="OAuthWebViewViewController" customModule="SlackStatus" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iza-7A-6ln"/>
+                        <viewControllerLayoutGuide type="bottom" id="UPm-9B-O0d"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bHb-Oo-1FS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5NU-wm-bZn">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                                <color key="backgroundColor" red="0.27450980390000002" green="0.80392156859999997" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="C0a-Gd-cMM"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Into Your Team" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="haf-xp-kAf">
+                                <rect key="frame" x="36" y="30" width="303" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ouG-i8-1Tb">
+                                <rect key="frame" x="329" y="21" width="30" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="20"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchedToDismissLogin:" destination="gvd-Fy-jrd" eventType="touchUpInside" id="vwi-FD-NQ7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5xk-yK-0hI">
+                                <rect key="frame" x="150" y="189" width="60" height="30"/>
+                                <state key="normal" title="Succeed"/>
+                                <connections>
+                                    <action selector="pressedDidSucceed:" destination="gvd-Fy-jrd" eventType="touchUpInside" id="pXK-iC-Y5i"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRR-vB-ohf">
+                                <rect key="frame" x="150" y="263" width="60" height="30"/>
+                                <state key="normal" title="Fail login"/>
+                                <connections>
+                                    <action selector="pressedDidFail:" destination="gvd-Fy-jrd" eventType="touchUpInside" id="XaS-cu-BJT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5NU-wm-bZn" firstAttribute="top" secondItem="bHb-Oo-1FS" secondAttribute="top" id="1VG-ig-TCS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ouG-i8-1Tb" secondAttribute="trailing" id="5bK-Ou-HYi"/>
+                            <constraint firstItem="5NU-wm-bZn" firstAttribute="leading" secondItem="bHb-Oo-1FS" secondAttribute="leading" id="7VG-Bf-NWe"/>
+                            <constraint firstItem="5xk-yK-0hI" firstAttribute="leading" secondItem="yRR-vB-ohf" secondAttribute="leading" id="9wu-Q0-swW"/>
+                            <constraint firstAttribute="trailing" secondItem="5NU-wm-bZn" secondAttribute="trailing" id="JkB-XQ-1x9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="haf-xp-kAf" secondAttribute="trailing" constant="20" id="PLN-O8-X3K"/>
+                            <constraint firstItem="5xk-yK-0hI" firstAttribute="top" secondItem="5NU-wm-bZn" secondAttribute="bottom" constant="124" id="Qe1-iC-fAN"/>
+                            <constraint firstItem="ouG-i8-1Tb" firstAttribute="baseline" secondItem="haf-xp-kAf" secondAttribute="baseline" id="Z7B-NH-uOf"/>
+                            <constraint firstItem="haf-xp-kAf" firstAttribute="top" secondItem="iza-7A-6ln" secondAttribute="bottom" constant="10" id="hP0-Nf-PZo"/>
+                            <constraint firstItem="yRR-vB-ohf" firstAttribute="top" secondItem="5xk-yK-0hI" secondAttribute="bottom" constant="44" id="hnX-Zf-yxQ"/>
+                            <constraint firstItem="haf-xp-kAf" firstAttribute="leading" secondItem="bHb-Oo-1FS" secondAttribute="leadingMargin" constant="20" id="qEw-mw-rFa"/>
+                            <constraint firstItem="5xk-yK-0hI" firstAttribute="leading" secondItem="bHb-Oo-1FS" secondAttribute="leading" constant="150" id="zVD-Vj-HTE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="exitButton" destination="ouG-i8-1Tb" id="lro-KZ-w1c"/>
+                        <outlet property="headerLabel" destination="haf-xp-kAf" id="dB5-qu-JfM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hZq-2s-eUu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1317.5999999999999" y="32.833583208395808"/>
+        </scene>
+        <!--Team Schedule-->
+        <scene sceneID="DXR-Lc-Jka">
+            <objects>
+                <viewController storyboardIdentifier="TeamScheduleViewController" title="Team Schedule" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KYl-Bt-Ub4" customClass="TeamScheduleViewController" customModule="SlackStatus" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hJ4-NQ-arK"/>
+                        <viewControllerLayoutGuide type="bottom" id="BXv-mT-TXh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TXQ-ES-Zxp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logged in and here is things" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgS-sa-pqA">
+                                <rect key="frame" x="79" y="28" width="216" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xgS-sa-pqA" firstAttribute="top" secondItem="hJ4-NQ-arK" secondAttribute="bottom" constant="8" symbolic="YES" id="2gM-Zy-oMY"/>
+                            <constraint firstItem="xgS-sa-pqA" firstAttribute="centerX" secondItem="TXQ-ES-Zxp" secondAttribute="centerX" id="VKo-ZS-Iin"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lCW-G3-hmi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2036" y="33"/>
         </scene>
     </scenes>
 </document>
