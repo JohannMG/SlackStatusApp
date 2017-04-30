@@ -11,5 +11,8 @@ import Foundation
 
 class ScheduleDataService {
     
+    let team = Team
+    
+    init()
     
 }

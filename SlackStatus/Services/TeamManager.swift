@@ -8,9 +8,6 @@
 
 import Foundation
 
-
-
-
 /*
  Managers mutiple login for teams
     - Update team name to display
@@ -24,6 +21,7 @@ import Foundation
 
 struct TeamKeys{
     static let allTeamsKey = "teams.allteams"
+    static let lastKey = "teams.lastUsed"
 }
 
 typealias ApiToken = String
@@ -65,4 +63,19 @@ class TeamManager {
         return KeychainWrapper.standard.string(forKey: team.id)
     }
     
+    static func setTeamLastUsed(_ team: Team){
+        UserDefaults.standard.set(team.id, forKey: TeamKeys.lastKey)
+    }
+    
+    static func getLastUsedTeam() -> Team? {
+        let lastUserTeamId = UserDefaults.standard.string(forKey: TeamKeys.lastKey)
+        return getAllTeams()?.filter{ $0.id == lastUserTeamId }.first
+    }
+    
 }
+
+
+
+
+
+
