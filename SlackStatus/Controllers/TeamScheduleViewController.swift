@@ -117,8 +117,6 @@ class TeamScheduleViewController: UIViewController {
             loadingView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
             loadingView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         }
-        
-        
     }
     
     private func setErrorState(){

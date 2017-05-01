@@ -163,9 +163,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tAi-Pf-h3l">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="141" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tAi-Pf-h3l">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="scheduleItemCell" rowHeight="141" id="j1t-aZ-sPU" customClass="ScheduleItemTableViewCell" customModule="SlackStatus" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="141"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="j1t-aZ-sPU" id="VSC-ym-Na0">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:34 pm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GId-qF-kTA" userLabel="Time">
+                                                    <rect key="frame" x="8" y="8" width="359" height="26.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monday, Tuesday, Thursday, Friday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUX-sK-4nm" userLabel="Days">
+                                                    <rect key="frame" x="8" y="33" width="359" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🖥 In the office" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T5p-aR-zhs" userLabel="Time">
+                                                    <rect key="frame" x="8" y="94" width="359" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.55406358506944442" green="0.55406358506944442" blue="0.55406358506944442" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="IUX-sK-4nm" firstAttribute="leading" secondItem="VSC-ym-Na0" secondAttribute="leadingMargin" id="0ff-J1-O2m"/>
+                                                <constraint firstItem="GId-qF-kTA" firstAttribute="leading" secondItem="VSC-ym-Na0" secondAttribute="leadingMargin" id="1h2-Rf-i8n"/>
+                                                <constraint firstItem="T5p-aR-zhs" firstAttribute="leading" secondItem="VSC-ym-Na0" secondAttribute="leadingMargin" id="75i-34-uRs"/>
+                                                <constraint firstItem="T5p-aR-zhs" firstAttribute="trailing" secondItem="VSC-ym-Na0" secondAttribute="trailingMargin" id="CAG-Bq-vMq"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="T5p-aR-zhs" secondAttribute="bottom" constant="14" id="FUm-qh-sGf"/>
+                                                <constraint firstItem="IUX-sK-4nm" firstAttribute="top" secondItem="GId-qF-kTA" secondAttribute="bottom" constant="-1.5" id="Rcq-E9-nUf"/>
+                                                <constraint firstItem="GId-qF-kTA" firstAttribute="top" secondItem="VSC-ym-Na0" secondAttribute="topMargin" id="gr3-Gu-mQT"/>
+                                                <constraint firstItem="IUX-sK-4nm" firstAttribute="trailing" secondItem="VSC-ym-Na0" secondAttribute="trailingMargin" id="pCl-lR-J7y"/>
+                                                <constraint firstItem="GId-qF-kTA" firstAttribute="trailing" secondItem="VSC-ym-Na0" secondAttribute="trailingMargin" id="pZq-ws-lYb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
