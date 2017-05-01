@@ -68,6 +68,11 @@ class TeamScheduleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         startRefresh()
+        setupTable()
+    }
+    
+    func setupTable(){
+//        tableView.register(ScheduleItemTableViewCell, forCellReuseIdentifier: "scheduleItemCell")
     }
     
     func startRefresh(){
@@ -129,12 +134,19 @@ class TeamScheduleViewController: UIViewController {
     
     private func showTableView(){
         print(#function)
+        guard let teamSchedule = teamSchedule else {
+            print("NO TEAM SCHEDULE")
+            return
+        }
+        
         UIView.animate(withDuration: 0.2) { 
             self.loadingView.alpha = 0
             
         }
-        tableView.isEditing = false
+        tableView.isHidden = false
         navigationController?.navigationBar.isHidden = false
+        tableView.dataSource = ScheduleTakeListTableData(WithService: teamSchedule)
+        tableView.reloadData()
     }
 
 }

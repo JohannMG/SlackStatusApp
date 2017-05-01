@@ -206,6 +206,11 @@
                                                 <constraint firstItem="GId-qF-kTA" firstAttribute="trailing" secondItem="VSC-ym-Na0" secondAttribute="trailingMargin" id="pZq-ws-lYb"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="daysListLabel" destination="IUX-sK-4nm" id="JPf-Dh-txg"/>
+                                            <outlet property="statusTextLabel" destination="T5p-aR-zhs" id="rFm-qH-gqd"/>
+                                            <outlet property="timeLabel" destination="GId-qF-kTA" id="lte-uv-y7v"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

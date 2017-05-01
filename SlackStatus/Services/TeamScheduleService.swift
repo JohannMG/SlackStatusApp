@@ -1,5 +1,5 @@
 //
-//  MockDataLoading.swift
+//  TeamScheduleService.swift
 //  SlackStatus
 //
 //  Created by Johann Garces on 4/30/17.
@@ -10,10 +10,10 @@ import Foundation
 
 typealias ScheduleItemRetreivalTask = (_ items: [ScheduleItem]?, _ error: Error?) -> Void
 
-class TeamScheduleService {
+class TeamScheduleService: NSObject {
     
     let team: Team
-    var scheduleItems = [ScheduleItem]()
+    private(set) var scheduleItems = [ScheduleItem]()
     
     init(WithTeam team: Team){
         self.team = team

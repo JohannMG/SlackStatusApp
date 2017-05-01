@@ -9,6 +9,10 @@
 import UIKit
 
 class ScheduleItemTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var daysListLabel: UILabel!
+    @IBOutlet weak var statusTextLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
