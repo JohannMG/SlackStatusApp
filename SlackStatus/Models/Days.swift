@@ -25,4 +25,8 @@ extension Days {
     static func getAllDays() -> Set<Days> {
         return getWeekdays().union( getWeekends() )
     }
+    
+    func asSet() -> Set<Days>{
+        return Set<Days>([self])
+    }
 }
