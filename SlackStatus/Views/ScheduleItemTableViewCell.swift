@@ -10,6 +10,7 @@ import UIKit
 
 class ScheduleItemTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var colorBoundingView: UIView!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var daysListLabel: UILabel!
     @IBOutlet weak var statusTextLabel: UILabel!
@@ -18,13 +19,15 @@ class ScheduleItemTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        backgroundColor = kAppColors.deepBlue
+        backgroundColor = UIColor.clear
+        colorBoundingView.backgroundColor = kAppColors.deepBlue
+        colorBoundingView.layer.cornerRadius = 6.0
     }
 
-//    override func setSelected(_ selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
 //        super.setSelected(selected, animated: animated)
-//
-//        // Configure the view for the selected state
-//    }
+
+        // Configure the view for the selected state
+    }
 
 }

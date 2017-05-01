@@ -64,6 +64,7 @@ class TeamScheduleViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     var loadingView = LoadingView()
+    var tableData: ScheduleTaskListTableData?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -145,7 +146,11 @@ class TeamScheduleViewController: UIViewController {
         }
         tableView.isHidden = false
         navigationController?.navigationBar.isHidden = false
-        tableView.dataSource = ScheduleTakeListTableData(WithService: teamSchedule)
+        tableData = ScheduleTaskListTableData(WithService: teamSchedule)
+        tableView.dataSource = tableData!
+        tableView.tableFooterView = UIView()
+        view.layoutSubviews()
+        tableView.contentInset = UIEdgeInsets(top: navigationController?.navigationBar.frame.height ?? 0, left: 0, bottom: 0, right: 0)
         tableView.reloadData()
     }
 

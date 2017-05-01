@@ -33,7 +33,7 @@ extension Days {
     static func getCollectionAsString<T: Collection>(_ days: T ) -> String {
         return days.filter{ $0 is Days }.map{ ($0 as! Days).rawValue }.reduce("") { sum, element in
             if sum == "" { return element }
-            return ", \(element)"
+            return "\(sum), \(element)"
             
         }
     }

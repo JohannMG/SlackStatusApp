@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ScheduleTakeListTableData: NSObject, UITableViewDataSource {
+class ScheduleTaskListTableData: NSObject, UITableViewDataSource {
     
     let cellReuseId = "scheduleItemCell"
     var teamScheduleService: TeamScheduleService
@@ -31,6 +31,7 @@ class ScheduleTakeListTableData: NSObject, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(section)
         return section == 0 ? teamScheduleService.scheduleItems.count : 0
     }
     
