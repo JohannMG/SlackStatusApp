@@ -63,7 +63,10 @@ class TeamScheduleViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        startRefresh()
+    }
+    
+    func startRefresh(){
         // Do any additional setup after loading the view.
         guard let activeTeam = TeamManager.getLastUsedTeam() else  {
             return
@@ -103,7 +106,7 @@ class TeamScheduleViewController: UIViewController {
     }
     
     private func showTableView(){
-    
+        
     }
 
 //    override func didReceiveMemoryWarning() {

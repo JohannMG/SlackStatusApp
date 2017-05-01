@@ -38,9 +38,9 @@ class WelcomeViewController: UIViewController {
 extension WelcomeViewController: OAuthSlackLoginDelegate {
     
     func loginDidSucceed(){
-        let scheduleViewController = self.storyboard?.instantiateViewController(withIdentifier: "TeamScheduleViewController")
+        let scheduleViewController = self.storyboard?.instantiateViewController(withIdentifier: "TeamScheduleNav")
         
-        if let scheduleViewController = scheduleViewController as? TeamScheduleViewController {
+        if let scheduleViewController = scheduleViewController {
             present(scheduleViewController, animated: true, completion: nil)
         }
     }

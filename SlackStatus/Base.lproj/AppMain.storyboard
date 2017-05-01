@@ -190,6 +190,7 @@
                             <constraint firstItem="BXv-mT-TXh" firstAttribute="top" secondItem="afY-Ap-K2E" secondAttribute="bottom" id="sRH-VL-Nhx"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="vsc-S7-SLA"/>
                     <connections>
                         <outlet property="blueLoadingView" destination="afY-Ap-K2E" id="ZtC-S7-x87"/>
                         <outlet property="loadingLabel" destination="j6s-t0-Lkv" id="dQX-lK-gk4"/>
@@ -197,7 +198,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lCW-G3-hmi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2975.1999999999998" y="32.833583208395808"/>
+            <point key="canvasLocation" x="2257" y="691"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xZq-kg-c6W">
+            <objects>
+                <navigationController storyboardIdentifier="TeamScheduleNav" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Fee-55-J0y" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Lif-bW-OcL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KYl-Bt-Ub4" kind="relationship" relationship="rootViewController" id="ZbY-Rl-J8H"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sSv-oe-jBJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1508" y="691"/>
         </scene>
     </scenes>
 </document>
