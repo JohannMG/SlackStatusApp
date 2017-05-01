@@ -17,6 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        if TeamManager.getAllTeams() == nil {
+            let fakeTeam = Team(id: "47328978", name: "My Test Team")
+            TeamManager.loggedInWithTeam(fakeTeam, AndApiTokenForTeam: "478923")
+            
+        }
+        
+        
+        
         return true
     }
 

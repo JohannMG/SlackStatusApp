@@ -69,9 +69,12 @@ class TeamScheduleViewController: UIViewController {
     func startRefresh(){
         // Do any additional setup after loading the view.
         guard let activeTeam = TeamManager.getLastUsedTeam() else  {
+            print("NO DEFAULT TEAM")
             return
             //OH NO KICK BACK TO LOGIN
         }
+        
+        navigationController?.navigationBar.isHidden = true
         
         displayState = .loading( activeTeam )
         teamSchedule = TeamScheduleService(WithTeam: activeTeam)
@@ -106,7 +109,8 @@ class TeamScheduleViewController: UIViewController {
     }
     
     private func showTableView(){
-        
+        blueLoadingView.isHidden = true
+        navigationController?.navigationBar.isHidden = false
     }
 
 //    override func didReceiveMemoryWarning() {

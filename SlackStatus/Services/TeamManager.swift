@@ -31,6 +31,9 @@ class TeamManager {
     static func loggedInWithTeam(_ team: Team, AndApiTokenForTeam teamApiToken: String){
         KeychainWrapper.standard.set(teamApiToken, forKey: team.id)
         addTeam(team)
+        
+        //Sets the last team to the one just logged in
+        setLastUsedTeam(team)
     }
     
     static func logoutTeam(_ team: Team){
@@ -50,20 +53,22 @@ class TeamManager {
         saveUpdatedTeamsList(allTeams)
     }
     
+    //SAVE TO USER DEFAULTS
     static func saveUpdatedTeamsList(_ team: [Team]){
-        UserDefaults.standard.set(team, forKey: TeamKeys.allTeamsKey)
+        UserDefaults.standard.set( Team.archiveTeams(team) , forKey: TeamKeys.allTeamsKey)
         UserDefaults.standard.synchronize()
     }
     
+    //READ FROM USER DEFAULTS
     static func getAllTeams() -> [Team]? {
-        return UserDefaults.standard.array(forKey: TeamKeys.allTeamsKey) as? [Team]
+        return Team.unarchiveTeamsFromData( UserDefaults.standard.data(forKey: TeamKeys.allTeamsKey) )
     }
     
     static func getApiTokenForTeam(_ team: Team) -> ApiToken? {
         return KeychainWrapper.standard.string(forKey: team.id)
     }
     
-    static func setTeamLastUsed(_ team: Team){
+    static func setLastUsedTeam(_ team: Team){
         UserDefaults.standard.set(team.id, forKey: TeamKeys.lastKey)
     }
     

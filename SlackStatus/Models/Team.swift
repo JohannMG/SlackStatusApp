@@ -3,7 +3,7 @@
 
 import Foundation
 
-class Team: NSCoding {
+class Team: NSObject, NSCoding {
     let id: String
     let name: String
     
@@ -26,10 +26,25 @@ class Team: NSCoding {
     }
 }
 
-extension Team: Equatable {
+//Archiving to Data
+extension Team {
+
+    class func archiveTeams(_ teams: [Team]) -> Data {
+        return NSKeyedArchiver.archivedData(withRootObject: teams)
+    }
     
-    static func == (lhs: Team, rhs: Team) -> Bool {
-        return lhs.id == rhs.id
+    class func unarchiveTeamsFromData(_ teamData: Data?) -> [Team]? {
+        guard let teamData = teamData else { return nil }
+        return NSKeyedUnarchiver.unarchiveObject(with: teamData) as? [Team]
     }
     
 }
+
+//extension Team: Equatable {
+//    
+//    static func == (lhs: Team, rhs: Team) -> Bool {
+//        return lhs.id == rhs.id
+//    }
+//    
+//}
+
