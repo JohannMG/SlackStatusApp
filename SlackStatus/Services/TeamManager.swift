@@ -28,6 +28,14 @@ typealias ApiToken = String
 
 class TeamManager {
     
+    static var isUserLoggedIn: Bool {
+        guard let teams = TeamManager.getAllTeams() else {
+            return false
+        }
+        
+        return teams.count > 0
+    }
+    
     static func loggedInWithTeam(_ team: Team, AndApiTokenForTeam teamApiToken: String){
         KeychainWrapper.standard.set(teamApiToken, forKey: team.id)
         addTeam(team)
