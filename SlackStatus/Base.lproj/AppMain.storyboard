@@ -163,7 +163,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="afY-Ap-K2E">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="afY-Ap-K2E" userLabel="BlueLoadingView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j6s-t0-Lkv">
@@ -190,6 +190,10 @@
                             <constraint firstItem="BXv-mT-TXh" firstAttribute="top" secondItem="afY-Ap-K2E" secondAttribute="bottom" id="sRH-VL-Nhx"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="blueLoadingView" destination="afY-Ap-K2E" id="ZtC-S7-x87"/>
+                        <outlet property="loadingLabel" destination="j6s-t0-Lkv" id="dQX-lK-gk4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lCW-G3-hmi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
