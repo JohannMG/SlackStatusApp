@@ -163,38 +163,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="afY-Ap-K2E" userLabel="BlueLoadingView">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j6s-t0-Lkv">
-                                        <rect key="frame" x="30" y="321.5" width="315" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qbD-m1-4XM">
+                                <rect key="frame" x="77" y="262" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.27450980390000002" green="0.80392156859999997" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="j6s-t0-Lkv" secondAttribute="trailing" constant="30" id="7e8-Jr-WZW"/>
-                                    <constraint firstItem="j6s-t0-Lkv" firstAttribute="centerX" secondItem="afY-Ap-K2E" secondAttribute="centerX" id="8v3-a5-CEi"/>
-                                    <constraint firstItem="j6s-t0-Lkv" firstAttribute="leading" secondItem="afY-Ap-K2E" secondAttribute="leading" constant="30" id="dv4-1x-rlp"/>
-                                    <constraint firstItem="j6s-t0-Lkv" firstAttribute="centerY" secondItem="afY-Ap-K2E" secondAttribute="centerY" id="y4Y-WB-n8v"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="afY-Ap-K2E" firstAttribute="top" secondItem="TXQ-ES-Zxp" secondAttribute="top" id="SAx-ZX-s9b"/>
-                            <constraint firstAttribute="trailing" secondItem="afY-Ap-K2E" secondAttribute="trailing" id="mvE-Px-OO2"/>
-                            <constraint firstItem="afY-Ap-K2E" firstAttribute="leading" secondItem="TXQ-ES-Zxp" secondAttribute="leading" id="nKO-xi-J7s"/>
-                            <constraint firstItem="BXv-mT-TXh" firstAttribute="top" secondItem="afY-Ap-K2E" secondAttribute="bottom" id="sRH-VL-Nhx"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vsc-S7-SLA"/>
-                    <connections>
-                        <outlet property="blueLoadingView" destination="afY-Ap-K2E" id="ZtC-S7-x87"/>
-                        <outlet property="loadingLabel" destination="j6s-t0-Lkv" id="dQX-lK-gk4"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lCW-G3-hmi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -24,6 +24,9 @@
 		2DCE5A1B1EB6A2CB00F438C3 /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCE5A191EB6A2CB00F438C3 /* KeychainItemAccessibility.swift */; };
 		2DCE5A1C1EB6A2CB00F438C3 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCE5A1A1EB6A2CB00F438C3 /* KeychainWrapper.swift */; };
 		2DCE5A1E1EB6A38100F438C3 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCE5A1D1EB6A38100F438C3 /* Team.swift */; };
+		2DCE5A241EB6CE7A00F438C3 /* ScheduleItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCE5A231EB6CE7A00F438C3 /* ScheduleItemTableViewCell.swift */; };
+		2DCE5A261EB6CF2200F438C3 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCE5A251EB6CF2200F438C3 /* LoadingView.swift */; };
+		2DCE5A281EB6CF6000F438C3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCE5A271EB6CF6000F438C3 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,9 @@
 		2DCE5A191EB6A2CB00F438C3 /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainItemAccessibility.swift; sourceTree = "<group>"; };
 		2DCE5A1A1EB6A2CB00F438C3 /* KeychainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
 		2DCE5A1D1EB6A38100F438C3 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Team.swift; path = Models/Team.swift; sourceTree = "<group>"; };
+		2DCE5A231EB6CE7A00F438C3 /* ScheduleItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScheduleItemTableViewCell.swift; path = Views/ScheduleItemTableViewCell.swift; sourceTree = "<group>"; };
+		2DCE5A251EB6CF2200F438C3 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoadingView.swift; path = Views/LoadingView.swift; sourceTree = "<group>"; };
+		2DCE5A271EB6CF6000F438C3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +123,7 @@
 		2DAC06571EB4EDEE00164121 /* SlackStatus */ = {
 			isa = PBXGroup;
 			children = (
-				2DAC065C1EB4EDEE00164121 /* AppMain.storyboard */,
+				2DCE5A221EB6CE0700F438C3 /* Views */,
 				2DCE5A181EB6A2B400F438C3 /* KeychainWrapper */,
 				2DCE5A131EB69E5000F438C3 /* Models */,
 				2DAC068B1EB4F9F500164121 /* Controllers */,
@@ -134,7 +140,7 @@
 				2DAC06721EB4EDEE00164121 /* Info.plist */,
 			);
 			path = SlackStatusTests;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		2DAC067A1EB4EDEE00164121 /* SlackStatusUITests */ = {
 			isa = PBXGroup;
@@ -167,6 +173,7 @@
 		2DCE5A131EB69E5000F438C3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2DCE5A1D1EB6A38100F438C3 /* Team.swift */,
 				2DCE5A111EB69E3800F438C3 /* ScheduleItem.swift */,
 				2DCE5A141EB6A00C00F438C3 /* Days.swift */,
 			);
@@ -178,7 +185,6 @@
 			children = (
 				2DCE5A191EB6A2CB00F438C3 /* KeychainItemAccessibility.swift */,
 				2DCE5A1A1EB6A2CB00F438C3 /* KeychainWrapper.swift */,
-				2DCE5A1D1EB6A38100F438C3 /* Team.swift */,
 			);
 			name = KeychainWrapper;
 			sourceTree = "<group>";
@@ -186,6 +192,7 @@
 		2DCE5A1F1EB6A3FA00F438C3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2DCE5A271EB6CF6000F438C3 /* Constants.swift */,
 				2DAC06581EB4EDEE00164121 /* AppDelegate.swift */,
 				2DAC06621EB4EDEE00164121 /* Assets.xcassets */,
 				2DAC06641EB4EDEE00164121 /* LaunchScreen.storyboard */,
@@ -193,6 +200,16 @@
 				2DAC065F1EB4EDEE00164121 /* SlackStatus.xcdatamodeld */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2DCE5A221EB6CE0700F438C3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2DAC065C1EB4EDEE00164121 /* AppMain.storyboard */,
+				2DCE5A251EB6CF2200F438C3 /* LoadingView.swift */,
+				2DCE5A231EB6CE7A00F438C3 /* ScheduleItemTableViewCell.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,7 +352,10 @@
 				2DCE5A0F1EB69A6B00F438C3 /* MockDataLoading.swift in Sources */,
 				2DCE5A121EB69E3800F438C3 /* ScheduleItem.swift in Sources */,
 				2DCE5A1E1EB6A38100F438C3 /* Team.swift in Sources */,
+				2DCE5A241EB6CE7A00F438C3 /* ScheduleItemTableViewCell.swift in Sources */,
 				2DAC06591EB4EDEE00164121 /* AppDelegate.swift in Sources */,
+				2DCE5A281EB6CF6000F438C3 /* Constants.swift in Sources */,
+				2DCE5A261EB6CF2200F438C3 /* LoadingView.swift in Sources */,
 				2DCE5A171EB6A23800F438C3 /* TeamManager.swift in Sources */,
 				2DCD0B591EB67E0E00359AE7 /* TeamScheduleViewController.swift in Sources */,
 				2DCD0B571EB67CEE00359AE7 /* WelcomeViewController.swift in Sources */,
