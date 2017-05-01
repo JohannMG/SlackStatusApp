@@ -10,6 +10,8 @@ import UIKit
 
 class LoadingView: UIView {
     
+    let loadingLabel = UILabel()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -22,7 +24,18 @@ class LoadingView: UIView {
     
     func commonInit(){
         
+        backgroundColor = kAppColors.brightBlue
+        addSubview(loadingLabel)
+        loadingLabel.translatesAutoresizingMaskIntoConstraints = false
+        loadingLabel.textAlignment = .center
         
+        loadingLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        loadingLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        loadingLabel.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        loadingLabel.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        
+        loadingLabel.textColor = UIColor.white
+        loadingLabel.text = "Loading..."
         
     }
 

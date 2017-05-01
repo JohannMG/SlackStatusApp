@@ -41,6 +41,10 @@ class TeamScheduleViewController: UIViewController {
     var displayState = ScheduleViewState.started {
         didSet {
             
+            if case .loading(_) = displayState {
+                setLoadingState()
+            }
+            
             if case .error(_) = displayState {
                 setErrorState()
             }
@@ -52,14 +56,14 @@ class TeamScheduleViewController: UIViewController {
             if case .loaded(_) = displayState {
                 showTableView()
             }
+            
         }
     }
     
     var teamSchedule: TeamScheduleService?
     
-    @IBOutlet weak var blueLoadingView: UIView!
-    @IBOutlet weak var loadingLabel: UILabel!
-    
+    @IBOutlet weak var tableView: UITableView!
+    var loadingView = LoadingView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,6 +71,9 @@ class TeamScheduleViewController: UIViewController {
     }
     
     func startRefresh(){
+        
+        tableView.isHidden = true
+        
         // Do any additional setup after loading the view.
         guard let activeTeam = TeamManager.getLastUsedTeam() else  {
             print("NO DEFAULT TEAM")
@@ -96,8 +103,22 @@ class TeamScheduleViewController: UIViewController {
             
         } else { // nil items or no items
             displayState = .empty(team)
+        
         }
-
+    }
+    
+    private func setLoadingState(){
+        tableView.isHidden = true
+        if loadingView.superview == nil {
+            view.addSubview(loadingView)
+            loadingView.translatesAutoresizingMaskIntoConstraints = false
+            loadingView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+            loadingView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+            loadingView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+            loadingView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        }
+        
+        
     }
     
     private func setErrorState(){
@@ -109,13 +130,20 @@ class TeamScheduleViewController: UIViewController {
     }
     
     private func showTableView(){
-        blueLoadingView.isHidden = true
+        print(#function)
+        UIView.animate(withDuration: 0.2) { 
+            self.loadingView.alpha = 0
+            
+        }
+        tableView.isEditing = false
         navigationController?.navigationBar.isHidden = false
     }
 
-//    override func didReceiveMemoryWarning() {
-//        super.didReceiveMemoryWarning()
-//        // Dispose of any resources that can be recreated.
-//    }
-
 }
+
+
+
+
+
+
+
