@@ -189,7 +189,18 @@ extension TeamScheduleViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print( "Selected row \(indexPath.row)" )
+        
+        if isAddButton(AtIndexPath: indexPath) {
+           showUpdateFormAsNew()
+        }
+    }
+    
+    func getupdateForm() -> UIViewController {
+        return storyboard!.instantiateViewController(withIdentifier: kStoryboardConstants.updateFormId)
+    }
+    
+    func showUpdateFormAsNew(){
+        navigationController?.pushViewController(getupdateForm(), animated: true)
     }
 }
 

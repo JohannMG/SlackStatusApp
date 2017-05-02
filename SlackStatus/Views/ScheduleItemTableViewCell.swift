@@ -22,6 +22,7 @@ class ScheduleItemTableViewCell: UITableViewCell {
         backgroundColor = UIColor.clear
         colorBoundingView.layer.cornerRadius = 6.0
         setGradient()
+        selectionStyle = .none
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -154,7 +155,7 @@
         <!--Team Schedule-->
         <scene sceneID="DXR-Lc-Jka">
             <objects>
-                <viewController storyboardIdentifier="TeamScheduleViewController" title="Team Schedule" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KYl-Bt-Ub4" customClass="TeamScheduleViewController" customModule="SlackStatus" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TeamScheduleViewController" title="Team Schedule" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KYl-Bt-Ub4" customClass="TeamScheduleViewController" customModule="SlackStatus" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hJ4-NQ-arK"/>
                         <viewControllerLayoutGuide type="bottom" id="BXv-mT-TXh"/>
@@ -300,7 +301,7 @@
         <!--Update-->
         <scene sceneID="16b-tV-7Ha">
             <objects>
-                <tableViewController title="Update" id="DGA-rQ-9XB" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="UpdateForm" title="Update" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DGA-rQ-9XB" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="iQ2-sl-eIk">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -321,8 +322,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Placeholder" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Onf-eQ-0Sb">
-                                                    <rect key="frame" x="113" y="8" width="254" height="30"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Placeholder" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Onf-eQ-0Sb">
+                                                    <rect key="frame" x="113" y="14" width="254" height="17"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -357,13 +358,22 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NextArrow" translatesAutoresizingMaskIntoConstraints="NO" id="Git-U1-HMR">
+                                                    <rect key="frame" x="347.5" y="12" width="19.5" height="19.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="Git-U1-HMR" secondAttribute="height" multiplier="1:1" id="3sV-nI-eVb"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="Git-U1-HMR" firstAttribute="top" secondItem="4ay-HU-m2R" secondAttribute="topMargin" constant="4" id="AP0-tk-3GM"/>
                                                 <constraint firstItem="Bup-i4-eIo" firstAttribute="trailing" secondItem="4ay-HU-m2R" secondAttribute="trailingMargin" id="GHL-Wp-aVz"/>
                                                 <constraint firstItem="ho2-od-gWF" firstAttribute="centerY" secondItem="4ay-HU-m2R" secondAttribute="centerY" id="f3k-aW-qNj"/>
                                                 <constraint firstItem="Bup-i4-eIo" firstAttribute="baseline" secondItem="ho2-od-gWF" secondAttribute="baseline" id="gra-zD-Wkh"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Git-U1-HMR" secondAttribute="trailing" id="hvd-EA-3SP"/>
                                                 <constraint firstItem="Bup-i4-eIo" firstAttribute="leading" secondItem="4ay-HU-m2R" secondAttribute="leadingMargin" constant="105" id="iIn-E5-BYf"/>
                                                 <constraint firstItem="ho2-od-gWF" firstAttribute="leading" secondItem="4ay-HU-m2R" secondAttribute="leadingMargin" id="rAV-bf-eUy"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Git-U1-HMR" secondAttribute="bottom" constant="4" id="siX-aP-Tib"/>
                                                 <constraint firstItem="Bup-i4-eIo" firstAttribute="leading" secondItem="ho2-od-gWF" secondAttribute="trailing" constant="8" id="wGs-aI-wI5"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -381,8 +391,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Placeholder" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ffv-tA-jGe">
-                                                    <rect key="frame" x="113" y="8" width="254" height="30"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Placeholder" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ffv-tA-jGe">
+                                                    <rect key="frame" x="113" y="14" width="254" height="17"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -411,8 +421,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Placeholder" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nO9-Ik-dYc">
-                                                    <rect key="frame" x="113" y="8" width="254" height="30"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Placeholder" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nO9-Ik-dYc">
+                                                    <rect key="frame" x="113" y="14" width="254" height="17"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -463,7 +473,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aKj-wQ-Wek" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3081" y="690"/>
+            <point key="canvasLocation" x="3080.8000000000002" y="689.5052473763119"/>
         </scene>
         <!--Scheduling Navigation Controller-->
         <scene sceneID="xZq-kg-c6W">
@@ -484,4 +494,7 @@
             <point key="canvasLocation" x="1508" y="691"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NextArrow" width="60" height="60"/>
+    </resources>
 </document>
