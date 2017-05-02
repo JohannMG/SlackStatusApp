@@ -28,6 +28,8 @@
 		2DCE5A261EB6CF2200F438C3 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCE5A251EB6CF2200F438C3 /* LoadingView.swift */; };
 		2DCE5A281EB6CF6000F438C3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCE5A271EB6CF6000F438C3 /* Constants.swift */; };
 		2DCE5A2A1EB6EC1B00F438C3 /* ScheduleTakeListTableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCE5A291EB6EC1B00F438C3 /* ScheduleTakeListTableData.swift */; };
+		2DCE5A2D1EB8008600F438C3 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCE5A2C1EB8008600F438C3 /* Utilities.swift */; };
+		2DCE5A2F1EB800E800F438C3 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCE5A2E1EB800E800F438C3 /* Collection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		2DCE5A251EB6CF2200F438C3 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoadingView.swift; path = Views/LoadingView.swift; sourceTree = "<group>"; };
 		2DCE5A271EB6CF6000F438C3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2DCE5A291EB6EC1B00F438C3 /* ScheduleTakeListTableData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScheduleTakeListTableData.swift; path = Controllers/ScheduleTakeListTableData.swift; sourceTree = "<group>"; };
+		2DCE5A2C1EB8008600F438C3 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		2DCE5A2E1EB800E800F438C3 /* Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Collection.swift; path = Extensions/Collection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,7 @@
 		2DAC06571EB4EDEE00164121 /* SlackStatus */ = {
 			isa = PBXGroup;
 			children = (
+				2DCE5A301EB800EF00F438C3 /* Extensions-Utilities */,
 				2DCE5A221EB6CE0700F438C3 /* Views */,
 				2DCE5A181EB6A2B400F438C3 /* KeychainWrapper */,
 				2DCE5A131EB69E5000F438C3 /* Models */,
@@ -213,6 +218,15 @@
 				2DCE5A231EB6CE7A00F438C3 /* ScheduleItemTableViewCell.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		2DCE5A301EB800EF00F438C3 /* Extensions-Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				2DCE5A2C1EB8008600F438C3 /* Utilities.swift */,
+				2DCE5A2E1EB800E800F438C3 /* Collection.swift */,
+			);
+			name = "Extensions-Utilities";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,7 +375,9 @@
 				2DCE5A261EB6CF2200F438C3 /* LoadingView.swift in Sources */,
 				2DCE5A171EB6A23800F438C3 /* TeamManager.swift in Sources */,
 				2DCD0B591EB67E0E00359AE7 /* TeamScheduleViewController.swift in Sources */,
+				2DCE5A2F1EB800E800F438C3 /* Collection.swift in Sources */,
 				2DCD0B571EB67CEE00359AE7 /* WelcomeViewController.swift in Sources */,
+				2DCE5A2D1EB8008600F438C3 /* Utilities.swift in Sources */,
 				2DCE5A2A1EB6EC1B00F438C3 /* ScheduleTakeListTableData.swift in Sources */,
 				2DAC06611EB4EDEE00164121 /* SlackStatus.xcdatamodeld in Sources */,
 				2DCE5A151EB6A00C00F438C3 /* Days.swift in Sources */,
