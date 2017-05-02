@@ -18,6 +18,17 @@ class ScheduleTaskListTableData: NSObject, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        //A schedule Item
+        if indexPath.row < teamScheduleService.scheduleItems.count {
+            return getTaskCellForTableView(tableView, cellForRowAt: indexPath)
+        }
+        
+        //The Add Button
+        return getAddButton(tableView)
+    }
+    
+    func getTaskCellForTableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseId, for: indexPath) as! ScheduleItemTableViewCell
         let scheduleItem = teamScheduleService.scheduleItems[indexPath.row]
         cell.timeLabel.text = "\(scheduleItem.hour):\(scheduleItem.minute)"
@@ -26,13 +37,18 @@ class ScheduleTaskListTableData: NSObject, UITableViewDataSource {
         return cell
     }
     
+    func getAddButton(_ tableView: UITableView) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "AddCell") as! AddItemTableViewCell
+        return cell
+        
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(section)
-        return section == 0 ? teamScheduleService.scheduleItems.count : 0
+        return section == 0 ? teamScheduleService.scheduleItems.count + 1 : 0
     }
     
     //    func sectionIndexTitles(for tableView: UITableView) -> [String]? {

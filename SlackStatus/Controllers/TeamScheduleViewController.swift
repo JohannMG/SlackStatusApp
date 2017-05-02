@@ -162,6 +162,7 @@ class TeamScheduleViewController: UIViewController {
         tableView.isHidden = false
         navigationController?.navigationBar.isHidden = false
         tableData = ScheduleTaskListTableData(WithService: teamSchedule)
+        tableView.delegate = self
         tableView.dataSource = tableData!
         tableView.tableFooterView = UIView()
         view.layoutSubviews()
@@ -174,6 +175,23 @@ class TeamScheduleViewController: UIViewController {
     }
 }
 
+extension TeamScheduleViewController: UITableViewDelegate {
+    
+    func isAddButton(AtIndexPath indexPath: IndexPath) -> Bool {
+        return indexPath.row == teamSchedule?.scheduleItems.count ?? -1
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if isAddButton(AtIndexPath: indexPath) {
+            return 55
+        }
+        return 140
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print( "Selected row \(indexPath.row)" )
+    }
+}
 
 
 

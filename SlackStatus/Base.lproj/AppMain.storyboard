@@ -225,6 +225,44 @@
                                             <outlet property="timeLabel" destination="GId-qF-kTA" id="lte-uv-y7v"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddCell" rowHeight="48" id="Oud-ZU-bKZ" customClass="AddItemTableViewCell" customModule="SlackStatus" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="169" width="375" height="48"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Oud-ZU-bKZ" id="uNt-YL-kEG">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iTi-Bn-yJW" userLabel="ColorView">
+                                                    <rect key="frame" x="8" y="6" width="359" height="36"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+ Add Update" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhN-LT-Zix">
+                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="36"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="19"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.27450980390000002" green="0.80392156859999997" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="dhN-LT-Zix" firstAttribute="top" secondItem="iTi-Bn-yJW" secondAttribute="top" id="5xe-VS-ZWR"/>
+                                                        <constraint firstAttribute="bottom" secondItem="dhN-LT-Zix" secondAttribute="bottom" id="6JB-bV-Cpc"/>
+                                                        <constraint firstAttribute="trailing" secondItem="dhN-LT-Zix" secondAttribute="trailing" id="XM0-oK-Vpj"/>
+                                                        <constraint firstItem="dhN-LT-Zix" firstAttribute="leading" secondItem="iTi-Bn-yJW" secondAttribute="leading" id="yQV-NU-nLy"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.55406358509999998" green="0.55406358509999998" blue="0.55406358509999998" alpha="0.0" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="iTi-Bn-yJW" firstAttribute="top" secondItem="uNt-YL-kEG" secondAttribute="top" constant="6" id="0XC-Ua-gbl"/>
+                                                <constraint firstAttribute="bottom" secondItem="iTi-Bn-yJW" secondAttribute="bottom" constant="6" id="dOV-I6-xfp"/>
+                                                <constraint firstAttribute="trailing" secondItem="iTi-Bn-yJW" secondAttribute="trailing" constant="8" id="ftx-67-ImH"/>
+                                                <constraint firstItem="iTi-Bn-yJW" firstAttribute="leading" secondItem="uNt-YL-kEG" secondAttribute="leading" constant="8" id="pTR-Qc-Bdq"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="colorView" destination="iTi-Bn-yJW" id="4DY-FZ-wLq"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>

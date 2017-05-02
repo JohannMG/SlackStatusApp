@@ -31,6 +31,7 @@
 		2DCE5A2D1EB8008600F438C3 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCE5A2C1EB8008600F438C3 /* Utilities.swift */; };
 		2DCE5A2F1EB800E800F438C3 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCE5A2E1EB800E800F438C3 /* Collection.swift */; };
 		2DCE5A321EB8071300F438C3 /* SchedulingNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCE5A311EB8071300F438C3 /* SchedulingNavigationController.swift */; };
+		2DCE5A351EB8134900F438C3 /* AddItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCE5A341EB8134900F438C3 /* AddItemTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		2DCE5A2C1EB8008600F438C3 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		2DCE5A2E1EB800E800F438C3 /* Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Collection.swift; path = Extensions/Collection.swift; sourceTree = "<group>"; };
 		2DCE5A311EB8071300F438C3 /* SchedulingNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SchedulingNavigationController.swift; path = Controllers/SchedulingNavigationController.swift; sourceTree = "<group>"; };
+		2DCE5A341EB8134900F438C3 /* AddItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddItemTableViewCell.swift; path = Views/AddItemTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +221,7 @@
 				2DAC065C1EB4EDEE00164121 /* AppMain.storyboard */,
 				2DCE5A251EB6CF2200F438C3 /* LoadingView.swift */,
 				2DCE5A231EB6CE7A00F438C3 /* ScheduleItemTableViewCell.swift */,
+				2DCE5A341EB8134900F438C3 /* AddItemTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				2DAC06611EB4EDEE00164121 /* SlackStatus.xcdatamodeld in Sources */,
 				2DCE5A151EB6A00C00F438C3 /* Days.swift in Sources */,
 				2DCE5A1C1EB6A2CB00F438C3 /* KeychainWrapper.swift in Sources */,
+				2DCE5A351EB8134900F438C3 /* AddItemTableViewCell.swift in Sources */,
 				2DCE5A321EB8071300F438C3 /* SchedulingNavigationController.swift in Sources */,
 				2DCD0B551EB6778400359AE7 /* OAuthWebViewViewController.swift in Sources */,
 				2DCE5A1B1EB6A2CB00F438C3 /* KeychainItemAccessibility.swift in Sources */,
