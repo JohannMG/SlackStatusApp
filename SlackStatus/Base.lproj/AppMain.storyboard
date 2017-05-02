@@ -236,8 +236,22 @@
                             <constraint firstItem="tAi-Pf-h3l" firstAttribute="leading" secondItem="TXQ-ES-Zxp" secondAttribute="leading" id="w44-5x-O0N"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Schedule" id="vsc-S7-SLA"/>
+                    <navigationItem key="navigationItem" title="Schedule" id="vsc-S7-SLA">
+                        <barButtonItem key="leftBarButtonItem" title="Item" style="plain" id="3WM-e1-mfF">
+                            <button key="customView" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8Fb-fm-R4V" userLabel="SettingButton">
+                                <rect key="frame" x="16" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="settingsPressed:" destination="KYl-Bt-Ub4" eventType="touchUpInside" id="SB7-7e-JSE"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="settingButton" destination="8Fb-fm-R4V" id="BkP-2H-tnu"/>
                         <outlet property="tableView" destination="tAi-Pf-h3l" id="g7N-a9-lgI"/>
                     </connections>
                 </viewController>

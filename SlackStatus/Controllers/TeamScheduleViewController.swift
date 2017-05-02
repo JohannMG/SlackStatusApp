@@ -62,6 +62,7 @@ class TeamScheduleViewController: UIViewController {
     
     var teamSchedule: TeamScheduleService?
     
+    @IBOutlet weak var settingButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     var loadingView = LoadingView()
     var tableData: ScheduleTaskListTableData?
@@ -70,7 +71,18 @@ class TeamScheduleViewController: UIViewController {
         super.viewDidLoad()
         startRefresh()
         setupTable()
+        setupNavBar()
+    }
+    
+    func setupNavBar(){
         navigationController?.title = "Schedule"
+        
+        settingButton.imageView?.contentMode = .scaleAspectFit
+        settingButton.setImage(UIImage(named: "SettingsGear"), for: .normal)
+        
+        let originalFrame = navigationItem.leftBarButtonItem?.customView?.frame ?? CGRect.zero
+        navigationItem.leftBarButtonItem?.customView?.frame = CGRect(x: originalFrame.minX, y: originalFrame.minY, width: originalFrame.height, height: originalFrame.height)
+        
     }
     
     func setupTable(){
@@ -157,6 +169,9 @@ class TeamScheduleViewController: UIViewController {
         tableView.reloadData()
     }
 
+    @IBAction func settingsPressed(_ sender: UIButton) {
+        print("Settings")
+    }
 }
 
 
