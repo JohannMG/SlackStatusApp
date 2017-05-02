@@ -20,14 +20,26 @@ class ScheduleItemTableViewCell: UITableViewCell {
         // Initialization code
         
         backgroundColor = UIColor.clear
-        colorBoundingView.backgroundColor = kAppColors.deepBlue
         colorBoundingView.layer.cornerRadius = 6.0
+        setGradient()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
-//        super.setSelected(selected, animated: animated)
+        super.setSelected(selected, animated: animated)
+        setGradient()
+        colorBoundingView.alpha = 1
 
         // Configure the view for the selected state
+    }
+    override func setHighlighted(_ highlighted: Bool, animated: Bool) {
+        super.setHighlighted(highlighted, animated: animated)
+        setGradient()
+        colorBoundingView.alpha = 1
+        
+    }
+    
+    private func setGradient(){
+        colorBoundingView.backgroundColor = kAppColors.deepBlue
     }
 
 }
