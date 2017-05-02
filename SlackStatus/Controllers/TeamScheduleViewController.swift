@@ -70,6 +70,7 @@ class TeamScheduleViewController: UIViewController {
         super.viewDidLoad()
         startRefresh()
         setupTable()
+        navigationController?.title = "Schedule"
     }
     
     func setupTable(){
@@ -98,6 +99,8 @@ class TeamScheduleViewController: UIViewController {
         
         //If there is no team, something started INCORRECTLY
         guard let team = displayState.getTeam() else { return }
+        
+        title = team.name
         
         if let error = error  {
             displayState = .error(team, error)

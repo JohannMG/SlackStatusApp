@@ -236,7 +236,7 @@
                             <constraint firstItem="tAi-Pf-h3l" firstAttribute="leading" secondItem="TXQ-ES-Zxp" secondAttribute="leading" id="w44-5x-O0N"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="vsc-S7-SLA"/>
+                    <navigationItem key="navigationItem" title="Schedule" id="vsc-S7-SLA"/>
                     <connections>
                         <outlet property="tableView" destination="tAi-Pf-h3l" id="g7N-a9-lgI"/>
                     </connections>
@@ -245,10 +245,10 @@
             </objects>
             <point key="canvasLocation" x="2256.8000000000002" y="690.40479760119945"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Scheduling Navigation Controller-->
         <scene sceneID="xZq-kg-c6W">
             <objects>
-                <navigationController storyboardIdentifier="TeamScheduleNav" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Fee-55-J0y" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="TeamScheduleNav" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Fee-55-J0y" customClass="SchedulingNavigationController" customModule="SlackStatus" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Lif-bW-OcL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
